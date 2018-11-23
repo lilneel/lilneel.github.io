@@ -177,6 +177,7 @@ a.active, .main-nav a:hover {
       border-radius: 10px;
       border: 3px solid rgba(0,0,0,0.7);
       background-color: rgba(0,0,0,0.7);
+      color: white;
       font-size: 20px;
       padding: 0 10px;
       float: left;
