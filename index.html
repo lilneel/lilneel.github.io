@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css\style.css">
+        <title> Developer: James Neel </title>
+    </head>
+    <body>
+        <div class="background">
+            <div class="main-nav">
+                <a class="a active" href="#"> Home </a>
+                <a class="b" href="#"> About Me </a>
+                <a class="c" href="#"> Projects </a>
+                <a class="d" href="#"> Contact Me </a>
+            </div>
+            <div class="content">
+                <div class="home">
+                    <h1> James Neel </h1>
+                    <h2> Full-Stack Developer </h2>
+                    <h2> React Development </h2>
+                    <h2> Lua Scripting </h2>
+                    <h2> Web Design </h2>
+                </div>
+
+                <div class="aboutMe">
+                    <p>
+                        <b> Who am I? </b><br>
+                            I am an aspiring, young developer that is looking for a bright future in the world of programming and software development. <br>
+                            I am in my // <!-- Freshman/Sophomore/Junior/Senior --> year of college pursuing a computer science degree at // <!-- College --> <br>
+                            I am interested in either taking up a career in cybersecurity or software engineering. <br>
+                            <b> What I can do for you: </b><br>
+                            I am able to develop and design any website you may request, backend and frontend and with JS frameworks. <br>
+                            I am also available for gmod lua scripting for any Garry's mod server. <br>
+                            <b> What I am experienced with: </b> <br>
+                            <!--
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-react"></i>
+                            -->
+                            <span class="about-images">
+                            <img src="images\html5.png" title="html5" width="100px" height="100px">
+                            <img src="images\css3_logo.png" title="css3" width="100px" height="100px">
+                            <img src="images\js.png" title="javascript" width="100px" height="100px">
+                            <img src="images\react.png" title="ReactJS" width="100px" height="100px">
+                            <img src="images\jquery.png" title="jquery" width="100px" height="100px">
+                            <img src="images\bootstrap.png" title="bootstrap" width="100px" height="100px">
+                            <img src="images\lua.png" title="lua" width="100px" height="100px">
+                            </span>
+                            
+                        </p>
+                    </div>
+                    
+                    <div class="projects">
+                    </div> 
+                    
+                    <div class="contact">
+                        <div id="contactForm">
+                            <form action="contact-form.php" method="post">
+                                <input type="text" name="name" class="inputtext" placeholder="First Name" required>
+                                <input type="text" name="name" class="inputtext" placeholder="Last Name" required>
+                                <input type="text" name="mail" class="inputtext" placeholder="Your Email" required>
+                                <textarea cols="4" rows="6" class="inputmessage" name="message" placeholder="What can I do for you?" required></textarea>
+                                <button type="submit" name="submit" class="submitbutton"> Submit </button>
+                            </form>
+                            <div class="link-image">
+                                <a href="https://github.com/lilneel"><img src="images\github.png" title="Github" width="105px" height="105px"></a>
+                                <a href="https://steamcommunity.com/id/lilneel/"><img src="images\steam.png" title="Steam" width="105px" height="105px"></a>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <script type="text/javascript" src="js\jquery-3.3.1.min.js"></script>
+                <script type="text/javascript">
+                
+                $(document).ready(function() {
+                    $('a').click(function() {
+                        var selected = $(this);
+                        $('a').removeClass('active');
+                        $(selected).addClass('active');
+                    });
+                    
+                    var $a = $('.a'),
+                    $b = $('.b'),
+                    $c = $('.c'),
+                    $d = $('.d'),
+                    $home = $('.home'),
+                    $aboutMe = $('.aboutMe'),
+                    $projects = $('.projects'),
+                    $contact = $('.contact');
+                    
+                    $a.click(function() {
+                        $home.fadeIn();
+                        $aboutMe.fadeOut();
+                        $projects.fadeOut();
+                        $contact.fadeOut();
+                    });
+                    
+                    $b.click(function() {
+                        $aboutMe.fadeIn();
+                        $home.fadeOut();
+                        $projects.fadeOut();
+                        $contact.fadeOut();
+                    });
+                    
+                    $c.click(function() {
+                        $projects.fadeIn();
+                        $aboutMe.fadeOut();
+                        $home.fadeOut();
+                        $contact.fadeOut();
+                    });
+                    
+                    $d.click(function() {
+                        $contact.fadeIn();
+                        $projects.fadeOut();
+                        $aboutMe.fadeOut();
+                        $home.fadeOut();
+                    }); 
+                });   
+            </script>
+            
+        </body>
+            </html>
