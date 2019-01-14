@@ -5,14 +5,6 @@
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css\style.css">
         <title> Developer: James Neel </title>
-		<script src="assets/js/jquery.min.js"></script>
-		<script type="text/javascript">var submitted=false;</script>
-		<script type="text/javascript">
-		$('#gform').on('submit', function(e) {
-		$('#gform *').fadeOut(2000);
-		$('#gform').prepend('Your submission has been processed...');
-		});
-	</script>
     </head>
     <body>
         <div class="background">
@@ -61,17 +53,14 @@
                     
                     <div class="contact">
                         <div id="contactForm">
-                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdB5grFTGS8mfiCNhukIs3eC5Ly9A9KKy2wzmTLWd8lT9goMQ/formResponse?usp=pp_url" target="hidden_iframe" onsubmit="submitted=true;">
-                                <input type="text" name="fName" class="inputtextFName" placeholder="First Name" required>
-                                <input type="text" name="lName" class="inputtextLName" placeholder="Last Name" required>
+                            <form action="contact-form.php" method="post">
+                                <input type="text" name="name" class="inputtextFName" placeholder="First Name" required>
+                                <input type="text" name="name" class="inputtextLName" placeholder="Last Name" required>
                                 <input type="text" name="mail" class="inputtext" placeholder="Your Email" required>
 								<input type="text" name="subject" class="inputtext" placeholder="Subject" required>
                                 <textarea cols="4" rows="6" class="inputmessage" name="message" placeholder="What can I do for you?" required></textarea>
                                 <button type="submit" name="submit" class="submitbutton"> Submit </button>
                             </form>
-							
-							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-							
                             <div class="link-image">
                                 <a href="https://github.com/lilneel"><img src="images\github.png" title="Github" width="105px" height="105px"></a>
                                 <a href="https://steamcommunity.com/id/lilneel/"><img src="images\steam.png" title="Steam" width="105px" height="105px"></a>
@@ -80,7 +69,7 @@
                     </div>        
                 </div>
 		
-		<!-Javascript for menu function -->
+		<!--Javascript for menu function-->
                 <script type="text/javascript" src="js\jquery-3.3.1.min.js"></script>
                 <script type="text/javascript">
                 
